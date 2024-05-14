@@ -1,6 +1,7 @@
 import pandas as pd
 
-from nlp_sentiment.nlp_model import SentimentTransformer, ChurnEstimator
+from transfomer_core import SentimentTransformer
+
 
 # # Data Description
 # ## `communications`
@@ -36,10 +37,10 @@ from nlp_sentiment.nlp_model import SentimentTransformer, ChurnEstimator
 
 class MyVeryDumbSentimentTransformer(SentimentTransformer):
 
-    def __init__(self, customer_id_col='CustomerId', yearmonth_col='yearmonth'):
+    def __init__(self, customer_id_col='CustomerId', yearmonth_col='yearmonth', sad_words=None):
         self.customer_id_col = customer_id_col
         self.yearmonth_col = yearmonth_col
-        self.sad_words = ['sad', 'angry', 'disappointed', 'problem']
+        self.sad_words = sad_words or ['sad', 'angry', 'disappointed', 'problem']
 
         # To be learned during the fit
         self.avg_communications_lift = None
@@ -79,20 +80,3 @@ class MyVeryDumbSentimentTransformer(SentimentTransformer):
         df_dyn_w_sentiment = df_dynamic.merge(df_agg, on=[self.customer_id_col, self.yearmonth_col], how='left')
 
         return df_dyn_w_sentiment
-
-
-class MySimpleEstimator(ChurnEstimator):
-
-    def __init__(self, customer_id_col='CustomerId', yearmonth_col='yearmonth'):
-        self.customer_id_col = customer_id_col
-        self.yearmonth_col = yearmonth_col
-
-    def fit(self, df_dynamic_w_sentiment, df_target) -> None:
-        pass
-
-    def predict(self, df_dynamic_w_sentiment) -> pd.DataFrame:
-        # Predict the churn based on the sentiment score
-        df = df_dynamic_w_sentiment.copy()
-        df['ChurnPrediction'] = (df['sentiment'] > 0).astype(int)
-
-        return df[[self.customer_id_col, self.yearmonth_col, 'ChurnPrediction']]
