@@ -31,8 +31,8 @@ import pandas as pd
 # * `yearmonth`: year and month of the communication. Use it to join with the `communications` table.
 # * `client` : Id of the client. Use it to join with the `communications` table.
 
-from proj_nlp_example.project_nlp_example.modeling.churn_classifier.model_example import MySimpleEstimator
-from proj_nlp_example.project_nlp_example.modeling.nlp_transformation.transformer_example import MyVeryDumbSentimentTransformer
+from project_nlp_example.modeling.model_A.model_A_churn_estimator import MySimpleEstimator
+from project_nlp_example.modeling.model_A.model_A_sentiment_transformer import MyVeryDumbSentimentTransformer
 
 DF_COMMUNICATIONS = pd.DataFrame(
     {

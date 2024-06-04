@@ -3,7 +3,7 @@ from pathlib import Path
 from loguru import logger
 from tqdm import tqdm
 
-from project_example.config import PROCESSED_DATA_DIR
+from proj_example.project_nlp_example.config import PROCESSED_DATA_DIR
 
 
 def main(
@@ -20,6 +20,3 @@ def main(
     logger.success("Features generation complete.")
     # -----------------------------------------
 
-
-if __name__ == "__main__":
-    main()

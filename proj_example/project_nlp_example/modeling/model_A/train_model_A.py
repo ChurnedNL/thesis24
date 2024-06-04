@@ -1,6 +1,5 @@
-import pandas as pd
-from nlp_transformation.transformer_example import MyVeryDumbSentimentTransformer
-from churn_classifier.model_example import MySimpleEstimator
+from project_nlp_example.modeling.model_A.model_A_sentiment_transformer import MyVeryDumbSentimentTransformer
+from project_nlp_example.modeling.model_A.model_A_churn_estimator import MySimpleEstimator
 
 from project_nlp_example.dataset import get_communications, get_dynamic_frame
 
@@ -39,7 +38,7 @@ def main():
 
 
 """ 
-The `train_main_model_A.py` script is the entry point for the regularization pipeline. It loads the data, sets the 
+The `train_model_A.py` script is the entry point for the regularization pipeline. It loads the data, sets the 
 hyperparameters search space, iterates over the hyperparameters search space, creates the model, fits the model, 
 predicts the churn, evaluates the model, and saves the best model to a pickle file.
 """

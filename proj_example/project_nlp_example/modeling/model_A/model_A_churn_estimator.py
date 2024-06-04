@@ -1,6 +1,14 @@
+from abc import ABC
+
 import pandas as pd
 
-from proj_nlp_example.project_nlp_example.modeling.churn_classifier.model_core import ChurnEstimator
+
+class ChurnEstimator(ABC):
+    def fit(self, df_dynamic_w_sentiment: pd.DataFrame, df_target: pd.DataFrame) -> None:
+        pass
+
+    def predict(self, df_dynamic_w_sentiment: pd.DataFrame) -> pd.DataFrame:
+        pass
 
 
 class MySimpleEstimator(ChurnEstimator):

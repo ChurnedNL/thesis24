@@ -1,4 +1,4 @@
-from proj_nlp_example.project_nlp_example.dataset import load_data, get_latest_data
+from proj_example.project_nlp_example.dataset import load_data, get_latest_data
 
 
 def main():
