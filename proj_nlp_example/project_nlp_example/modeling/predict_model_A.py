@@ -23,7 +23,6 @@ def main():
     return df_predictions
 
 
-
 '''
 The `prediction_script.py` script is the entry point for the prediction pipeline. It loads the prediction data, loads the trained model from a pickle file, predicts the churn using the trained model, and saves the predictions to a CSV file.
 
@@ -41,3 +40,5 @@ def load_model(file_path):
     raise NotImplementedError
 
 
+if __name__ == "__main__":
+    main()

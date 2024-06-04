@@ -1,8 +1,9 @@
 import pandas as pd
-from proj_nlp_example.project_nlp_example.modeling.nlp_transformation.transformer_example import MyVeryDumbSentimentTransformer
+from nlp_transformation.transformer_example import MyVeryDumbSentimentTransformer
 from churn_classifier.model_example import MySimpleEstimator
 
 from project_nlp_example.dataset import get_communications, get_dynamic_frame
+
 
 def main():
     # Load data
@@ -89,3 +90,7 @@ def evaluate(df_predictions, df_target):
 def save_model(model, file_path):
     # Implement your own save model logic here
     raise NotImplementedError
+
+
+if __name__ == "__main__":
+    main()
