@@ -6,10 +6,7 @@ from tqdm import tqdm
 
 from project_example.config import FIGURES_DIR, PROCESSED_DATA_DIR
 
-app = typer.Typer()
 
-
-@app.command()
 def main(
     # ---- REPLACE DEFAULT PATHS AS APPROPRIATE ----
     input_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
@@ -26,4 +23,4 @@ def main(
 
 
 if __name__ == "__main__":
-    app()
+    main()

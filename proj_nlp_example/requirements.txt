@@ -5,4 +5,5 @@ loguru
 pip
 python-dotenv
 tqdm
-typer
+pandas
+pytest

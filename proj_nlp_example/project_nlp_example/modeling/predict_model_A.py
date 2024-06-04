@@ -1,3 +1,5 @@
+from proj_nlp_example.project_nlp_example.dataset import load_data, get_latest_data
+
 
 def main():
     # Load trained models from pickle files
@@ -39,9 +41,3 @@ def load_model(file_path):
     raise NotImplementedError
 
 
-def load_data(file_path):
-    raise NotImplementedError
-
-
-def get_latest_data(df_dynamic_frame):
-    raise NotImplementedError

@@ -20,6 +20,3 @@ def main(
     logger.success("Features generation complete.")
     # -----------------------------------------
 
-
-if __name__ == "__main__":
-    main()

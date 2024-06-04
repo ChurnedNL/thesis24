@@ -1,14 +1,16 @@
 import pandas as pd
-from nlp_sentiment.nlp_transformation.transformer_example import MyVeryDumbSentimentTransformer
+from proj_nlp_example.project_nlp_example.modeling.nlp_transformation.transformer_example import MyVeryDumbSentimentTransformer
 from churn_classifier.model_example import MySimpleEstimator
 
+from project_nlp_example.dataset import get_communications, get_dynamic_frame
 
 def main():
     # Load data
-    df_dynamic_frame_raw = pd.read_csv("data.csv")
+    df_dynamic_frame_raw = get_dynamic_frame()
+    df_communications = get_communications()
+
     df_target = df_dynamic_frame_raw[['CustomerId', 'yearmonth', 'Churn']]
     df_dynamic_frame = df_dynamic_frame_raw.drop('Churn', axis=1)
-    df_communications = pd.read_csv("communications.csv")
 
     # Set hyperparameters search space
     hyperparameters = {
@@ -36,7 +38,7 @@ def main():
 
 
 """ 
-The `regularization_main.py` script is the entry point for the regularization pipeline. It loads the data, sets the 
+The `train_main_model_A.py` script is the entry point for the regularization pipeline. It loads the data, sets the 
 hyperparameters search space, iterates over the hyperparameters search space, creates the model, fits the model, 
 predicts the churn, evaluates the model, and saves the best model to a pickle file.
 """

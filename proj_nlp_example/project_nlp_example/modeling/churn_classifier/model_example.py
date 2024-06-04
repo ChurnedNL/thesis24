@@ -1,6 +1,6 @@
 import pandas as pd
 
-from nlp_sentiment.churn_classifier.model_core import ChurnEstimator
+from proj_nlp_example.project_nlp_example.modeling.churn_classifier.model_core import ChurnEstimator
 
 
 class MySimpleEstimator(ChurnEstimator):
