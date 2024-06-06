@@ -22,7 +22,9 @@ model_B is an example of a script to train a new model.
 2. Create a new directory with the name of your project
 3. Copy the contents of `proj_example` to your new directory
 4. Divide your code in a similar structure as in proj_example
-Note, if you feel unsure on where to place a piece of code, create a file or folder with a name that represents on what is being done there. Then follow the structure of the files represented below. Also add an explanation about those additional files on this `README.md` file.
+
+Note: if you feel unsure on where to place a piece of code, create a file or folder with a name that represents on what is being done there. Then follow the structure of the files represented below. Also add an explanation about those additional files on this `README.md` file.
+
 ## What is expected from you
 For the models you created, you should:
 - Create a script to load data on the `dataset.py` file
@@ -34,8 +36,10 @@ For the models you created, you should:
 
 ## Separate your files in functions
 It is important to separate your code in functions. This will make it easier for others to understand and make use of your code. 
+
 Every **script** file should consist of:
 - imports (from other files in this repository or from libraries)
 - one `main()` function that calls other functions
 - file dependent functions: functions that are only used in this file. These functions should be defined after the main() function. 
-Note, we prefer to have more functions over only a few functions where too many steps are combined.  
+
+Note: we prefer to have more functions over only a few functions where too many steps are combined.  
