@@ -36,6 +36,6 @@ For the models you created, you should:
 It is important to separate your code in functions. This will make it easier for others to understand and make use of your code. 
 Every **script** file should consist of:
 - imports (from other files in this repository or from libraries)
-- one main() functions that calls other functions
+- one `main()` function that calls other functions
 - file dependent functions: functions that are only used in this file. These functions should be defined after the main() function. 
 Note, we prefer to have more functions over only a few functions where too many steps are combined.  
